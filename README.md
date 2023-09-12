@@ -1,34 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# cloning instagram with Next 13 version!
 
-## Getting Started
+## 1. 해당 프로젝트의 목적
 
-First, run the development server:
+- Next.js 13버전 손으로 익히기
+- Headless CMS 맛보기
+- vercel에서 만든 네트워크 상태 라이브러리 SWR 익혀보기
+- NextAuth.js 사용해보기
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 2. 상세 내역
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. 로그인 페이지
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [ ] Sign in with Google 버튼 : 구글 계정으로 로그인
 
-## Learn More
+### 2. 홈페이지 진입 (/)
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] 로그인한 사용자 정보 오른쪽 (profile img, id, name)  
+       : 아바타 클릭하면 profile 과 포스팅을 볼 수 있다.
+- [ ] 왼쪽 상단 팔로잉 중인 사용자의 프로필 (profile img, id)
+- [ ] 포스트 카드
+- [ ] 좋아요 기능 + 좋아요 개수 view
+- [ ] 북마크 기능
+- [ ] 아이디 + 게시글
+- [ ] 사진 이미지 크게
+- [ ] view all [댓글 개수] comments  
+       : 클릭하면 포스트 카드 view를 볼 수 있다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] 몇분 전에 쓴 글인지 표기
+- [ ] 이모지 + 댓글창 + post 기능 (비활성화했다가 한글자 치면 활성화)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 3. 포스트 카드 view
 
-## Deploy on Vercel
+- [ ] 모달 형태로 구현 이미지 + 위에 있는 모든 댓글 보여주.기 기능
+- [ ] 좋아요 + 북마크 위 기능과 똑같다.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. 사용자의 피드 (/user/:userId)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### 4-1. 상단
+
+- [ ] 프로필 + 아이디 + 이름
+- [ ] posts 개수 / 팔로워 수 / 팔로잉 수
+- [ ] 내 피드가 아닐 경우 Follow/Unfollow 버튼 표시
+      <br>
+
+#### 4-2. 아래 3개의 tab으로 구성 - 각 클릭 시 리스트 가져오기
+
+- [ ] posts - 내 포스팅
+- [ ] saved - 북마크
+- [ ] liked - 좋아요
+- [ ] 각 포스팅 호버 시 좋아요 & 댓글 개수 확인 가능
+
+### 5. 검색 기능 (/search)
+
+- [ ] 아이디, 이름 검색 시 사용자 프로필, 아이디, 이름 팔로워, 팔로잉 수 나옴
+
+### 6. 포스팅 기능 (/new)
+
+- [ ] 이미지 첨부
+- [ ] 이미지 드래그앤드롭 기능
+- [ ] 게시글 써넣기
+
+### 7. 비회원 : 검색 기능 + 사용자 피드 전체 보기까지만 가능하다.
